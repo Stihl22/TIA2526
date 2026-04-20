@@ -1,0 +1,61 @@
+sintoma_principal,consciencia,dificuldade_resp_grave,hemorragia_grave,manchas_pele,cefaleia_rigidez,convulsao_febril,febre_gte_40,duracao_gt_48h,agravamento_progressivo,criterios_gravidade,desidratacao,comorbilidades,duracao_lt_48h,cede_antipireticos,suporte_domicilio,cianose,incapacidade_falar,estridor,dispneia_repouso,dor_toracica,pieira,asma_conhecida,febre_assoc,hemoptises,dispneia_assoc,anosmia,ageusia,Classe_Desfecho
+Febre,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,ADR-SU (Servico de Urgencia)
+Tosse,1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Febre,1,0,0,0,0,1,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,ADR-SU (Servico de Urgencia)
+Tosse,1,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,1,0,0,0,TRANSFERENCIA -> Enfermeiro SNS24
+Dispneia,1,0,0,0,0,1,1,0,0,0,0,0,1,1,0,0,0,1,0,0,0,1,1,0,0,0,0,EMERGENCIA (112 / INEM)
+Dispneia,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,TRANSFERENCIA -> Enfermeiro SNS24
+Tosse,1,0,0,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Febre,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,EMERGENCIA (112 / INEM)
+Dispneia,1,0,0,1,0,0,0,0,1,0,0,0,1,1,1,1,1,0,0,0,1,1,1,1,0,0,0,EMERGENCIA (112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,0,1,0,1,AUTOCUIDADO SEM TESTE COVID
+Dispneia,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Febre,1,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0,"CONSULTA CSP (Centro de Saude, nas proximas 24h)"
+Tosse,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,1,0,0,1,0,0,1,0,0,AUTOCUIDADO SEM TESTE COVID
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,TRANSFERENCIA -> Enfermeiro SNS24
+Febre,1,0,1,0,0,0,1,1,1,0,1,0,0,0,0,1,0,0,0,0,0,1,0,1,0,1,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Febre,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,TRANSFERENCIA -> Enfermeiro SNS24
+Febre,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,1,TRANSFERENCIA -> Enfermeiro SNS24
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,EMERGENCIA (112 / INEM)
+Tosse,1,0,0,0,0,1,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Dispneia,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Febre,1,0,0,1,0,0,0,1,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,TRANSFERENCIA -> Enfermeiro SNS24
+Dispneia,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,TRANSFERENCIA -> Enfermeiro SNS24
+Febre,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Febre,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,1,0,0,0,1,1,0,TRANSFERENCIA -> Enfermeiro SNS24
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,0,EMERGENCIA (112 / INEM)
+Febre,1,0,0,1,1,0,0,0,0,0,0,1,0,0,1,0,1,1,0,1,1,0,0,1,0,0,0,EMERGENCIA (112 / INEM)
+Tosse,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,0,1,0,0,0,1,0,1,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,1,1,0,0,0,1,0,1,0,0,1,1,0,0,0,1,0,0,0,TRANSFERENCIA -> Enfermeiro SNS24
+Dispneia,1,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,1,1,1,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Tosse,1,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,TRANSFERENCIA -> Enfermeiro SNS24
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Febre,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,TRANSFERENCIA -> Enfermeiro SNS24
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,AUTOCUIDADO SEM TESTE COVID
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,EMERGENCIA (112 / INEM)
+Tosse,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,1,0,0,0,1,0,AUTOCUIDADO SEM TESTE COVID
+Dispneia,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,TRANSFERENCIA -> Enfermeiro SNS24
+Febre,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,1,1,1,1,0,0,0,0,ADR-SU (Servico de Urgencia)
+Febre,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Dispneia,1,1,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,1,0,1,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Tosse,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Febre,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Tosse,1,0,0,0,0,0,1,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,TRANSFERENCIA -> Enfermeiro SNS24
+Febre,1,0,0,1,0,1,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,1,1,1,ADR-SU (Servico de Urgencia)
+Febre,1,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,1,TRANSFERENCIA -> Enfermeiro SNS24
+Dispneia,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,TRANSFERENCIA -> Enfermeiro SNS24
+Febre,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,TRANSFERENCIA -> Enfermeiro SNS24
+Tosse,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Tosse,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,AUTOCUIDADO SEM TESTE COVID
+Febre,1,0,1,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Dispneia,1,0,1,0,0,1,0,0,1,0,0,0,0,1,1,0,1,0,1,1,0,0,1,1,1,1,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
