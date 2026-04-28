@@ -1,0 +1,67 @@
+sintoma_principal,consciencia,dificuldade_resp_grave,hemorragia_grave,manchas_pele,cefaleia_rigidez,convulsao_febril,febre_gte_40,duracao_gt_48h,agravamento_progressivo,criterios_gravidade,desidratacao,comorbilidades,duracao_lt_48h,cede_antipireticos,suporte_domicilio,cianose,incapacidade_falar,estridor,dispneia_repouso,dor_toracica,pieira,asma_conhecida,febre_assoc,hemoptises,dispneia_assoc,anosmia,ageusia,Classe_Desfecho
+Qualquer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Qualquer,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA ABSOLUTA (Ligue 112 / INEM)
+Febre,1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA (112 / INEM)
+Febre,1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA (112 / INEM)
+Febre,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA (112 / INEM)
+Febre,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA (112 / INEM)
+Febre,1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,EMERGENCIA (112 / INEM)
+Febre,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Febre,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Febre,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Febre,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Febre,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Febre,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"CONSULTA CSP (Centro de Saude, nas proximas 24h)"
+Febre,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"CONSULTA CSP (Centro de Saude, nas proximas 24h)"
+Febre,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"CONSULTA CSP (Centro de Saude, nas proximas 24h)"
+Febre,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"CONSULTA CSP (Centro de Saude, nas proximas 24h)"
+Febre,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,"CONSULTA CSP (Centro de Saude, nas proximas 24h)"
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO COM VIGILANCIA
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO COM VIGILANCIA
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO COM VIGILANCIA
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO COM VIGILANCIA
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO COM VIGILANCIA
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO COM VIGILANCIA
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO COM VIGILANCIA
+Febre,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO COM VIGILANCIA
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,ADR-SU (Servico de Urgencia)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,AUTOCUIDADO COM VIGILANCIA (24h)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,AUTOCUIDADO COM VIGILANCIA (24h)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,AUTOCUIDADO COM VIGILANCIA (24h)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,AUTOCUIDADO COM VIGILANCIA (24h)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,AUTOCUIDADO COM VIGILANCIA (24h)
+Dispneia,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,AUTOCUIDADO COM VIGILANCIA (24h)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,EMERGENCIA (112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,EMERGENCIA (112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,EMERGENCIA (112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,EMERGENCIA (112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,EMERGENCIA (112 / INEM)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,AUTOCUIDADO (Teste COVID + Isolamento 7 dias)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,AUTOCUIDADO (Teste COVID + Isolamento 7 dias)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,AUTOCUIDADO (Teste COVID + Isolamento 7 dias)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,AUTOCUIDADO (Teste COVID + Isolamento 7 dias)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,AUTOCUIDADO (Teste COVID + Isolamento 7 dias)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,AUTOCUIDADO (Teste COVID + Isolamento 7 dias)
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
+Tosse,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,AUTOCUIDADO SEM TESTE COVID
