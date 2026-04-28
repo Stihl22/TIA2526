@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="12.1.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.4.000" expanded="true" name="Process" origin="GENERATED_TUTORIAL">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="12.1.001" expanded="true" height="68" name="Read CSV" width="90" x="179" y="34">
+        <parameter key="csv_file" value="/Users/pedrolindo/Documentos/3ano/2semestre/TIA/TIA2526/dataset_triagem.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="multiline_text" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="use_header_row" value="true"/>
+        <parameter key="header_row" value="1"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="Europe/Lisbon"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="UTF-8"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="sintoma_principal.true.polynominal.attribute"/>
+          <parameter key="1" value="consciencia.true.integer.attribute"/>
+          <parameter key="2" value="dificuldade_resp_grave.true.integer.attribute"/>
+          <parameter key="3" value="hemorragia_grave.true.integer.attribute"/>
+          <parameter key="4" value="manchas_pele.true.integer.attribute"/>
+          <parameter key="5" value="cefaleia_rigidez.true.integer.attribute"/>
+          <parameter key="6" value="convulsao_febril.true.integer.attribute"/>
+          <parameter key="7" value="febre_gte_40.true.integer.attribute"/>
+          <parameter key="8" value="duracao_gt_48h.true.integer.attribute"/>
+          <parameter key="9" value="agravamento_progressivo.true.integer.attribute"/>
+          <parameter key="10" value="criterios_gravidade.true.integer.attribute"/>
+          <parameter key="11" value="desidratacao.true.integer.attribute"/>
+          <parameter key="12" value="comorbilidades.true.integer.attribute"/>
+          <parameter key="13" value="duracao_lt_48h.true.integer.attribute"/>
+          <parameter key="14" value="cede_antipireticos.true.integer.attribute"/>
+          <parameter key="15" value="suporte_domicilio.true.integer.attribute"/>
+          <parameter key="16" value="cianose.true.integer.attribute"/>
+          <parameter key="17" value="incapacidade_falar.true.integer.attribute"/>
+          <parameter key="18" value="estridor.true.integer.attribute"/>
+          <parameter key="19" value="dispneia_repouso.true.integer.attribute"/>
+          <parameter key="20" value="dor_toracica.true.integer.attribute"/>
+          <parameter key="21" value="pieira.true.integer.attribute"/>
+          <parameter key="22" value="asma_conhecida.true.integer.attribute"/>
+          <parameter key="23" value="febre_assoc.true.integer.attribute"/>
+          <parameter key="24" value="hemoptises.true.integer.attribute"/>
+          <parameter key="25" value="dispneia_assoc.true.integer.attribute"/>
+          <parameter key="26" value="anosmia.true.integer.attribute"/>
+          <parameter key="27" value="ageusia.true.integer.attribute"/>
+          <parameter key="28" value="Classe_Desfecho.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="blending:set_role" compatibility="12.1.001" expanded="true" height="82" name="Set Role" width="90" x="380" y="34">
+        <list key="set_roles">
+          <parameter key="Classe_Desfecho" value="label"/>
+        </list>
+      </operator>
+      <operator activated="true" class="concurrency:parallel_decision_tree" compatibility="12.1.001" expanded="true" height="103" name="Decision Tree" width="90" x="581" y="34">
+        <parameter key="criterion" value="information_gain"/>
+        <parameter key="maximal_depth" value="10"/>
+        <parameter key="apply_pruning" value="false"/>
+        <parameter key="confidence" value="0.1"/>
+        <parameter key="apply_prepruning" value="true"/>
+        <parameter key="minimal_gain" value="0.01"/>
+        <parameter key="minimal_leaf_size" value="2"/>
+        <parameter key="minimal_size_for_split" value="4"/>
+        <parameter key="number_of_prepruning_alternatives" value="3"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Set Role" to_port="example set input"/>
+      <connect from_op="Set Role" from_port="example set output" to_op="Decision Tree" to_port="training set"/>
+      <connect from_op="Decision Tree" from_port="model" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
