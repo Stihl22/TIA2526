@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import _tree
+from sklearn.model_selection import cross_val_score
 
 def get_text_pergunta(feature):
     textos = {
@@ -34,7 +35,6 @@ def get_text_pergunta(feature):
     }
     return textos.get(feature, f'Tem o sintoma {feature}?')
 
-
 def tree_to_prolog(tree, feature_names, classes):
     tree_ = tree.tree_
     feature_name = [
@@ -50,11 +50,13 @@ def tree_to_prolog(tree, feature_names, classes):
     regras_prolog.append("% =============================================================\n")
     regras_prolog.append(":- discontiguous regra_ml/2.")
     regras_prolog.append(":- discontiguous pre_triagem/2.\n")
+    regras_prolog.append("% Helper para lidar com respostas '0.0' que causam fail no pergunta/3 original")
+    regras_prolog.append("pergunta_cf(Atributo, Texto, Certeza) :-")
+    regras_prolog.append("    ( pergunta(Atributo, Texto, C) -> Certeza = C ; Certeza = 0.0 ).\n")
 
     def recurse(node, path):
         if tree_.feature[node] != _tree.TREE_UNDEFINED:
             name = feature_name[node]
-            threshold = tree_.threshold[node]
             recurse(tree_.children_left[node], path + [(name, 0)])
             recurse(tree_.children_right[node], path + [(name, 1)])
         else:
@@ -62,7 +64,6 @@ def tree_to_prolog(tree, feature_names, classes):
             class_idx = counts.argmax()
             class_name = classes[class_idx]
             
-            # Verificar se é regra de pré-triagem (ABC)
             is_pre_triagem = False
             for feat, val in path:
                 if (feat == 'consciencia' and val == 0) or \
@@ -86,7 +87,6 @@ def tree_to_prolog(tree, feature_names, classes):
                         if sintoma != 'qualquer':
                             corpo.append(f"    sintoma_principal({sintoma})")
                     else:
-                        # Se val == 0, significa que sintoma_principal != X
                         sintoma = feat.split('_')[2].lower()
                         if sintoma != 'qualquer':
                             corpo.append(f"    \\+ sintoma_principal({sintoma})")
@@ -94,31 +94,47 @@ def tree_to_prolog(tree, feature_names, classes):
                 
                 texto = get_text_pergunta(feat)
                 if val == 1:
-                    corpo.append(f"    pergunta({feat}, '{texto}', C{idx_certeza})")
+                    corpo.append(f"    pergunta_cf({feat}, '{texto}', C{idx_certeza})")
                     afirmativas.append(f"C{idx_certeza}")
                     idx_certeza += 1
                 else:
-                    corpo.append(f"    \\+ pergunta({feat}, '{texto}', _)")
+                    # Lógica Fuzzy: A certeza de NÃO ter o sintoma
+                    corpo.append(f"    pergunta_cf({feat}, '{texto}', Tmp{idx_certeza})")
+                    corpo.append(f"    C{idx_certeza} is 1.0 - Tmp{idx_certeza}")
+                    afirmativas.append(f"C{idx_certeza}")
+                    idx_certeza += 1
             
-            # Cálculo de Certeza
+            # Lógica AND (mínimo)
             if len(afirmativas) == 0:
-                calc_certeza = "    C = 0.7"
+                calc_certeza = "    C_Premissas = 1.0"
             elif len(afirmativas) == 1:
-                calc_certeza = f"    C = {afirmativas[0]}"
+                calc_certeza = f"    C_Premissas = {afirmativas[0]}"
             else:
                 eq = afirmativas[-1]
                 for c_var in reversed(afirmativas[:-1]):
                     eq = f"min({c_var}, {eq})"
-                calc_certeza = f"    C is {eq}"
+                calc_certeza = f"    C_Premissas is {eq}"
                 
             corpo.append(calc_certeza)
+            
+            # Força da regra
+            if "EMERGENCIA" in class_name:
+                forca_regra = "0.95"
+            elif "URGENCIA" in class_name or "ADR-SU" in class_name:
+                forca_regra = "0.85"
+            else:
+                forca_regra = "0.75"
+                
+            corpo.append(f"    C is C_Premissas * {forca_regra}")
+            corpo.append(f"    C > 0.0") # Regra só é guardada se o CF final > 0
             
             path_str = str(path).replace("'", "''")
             corpo.append(f"    assert_just('Regra ML: {path_str}', C)")
             
             if len(corpo) > 0:
                 regras_prolog.append(regra_head)
-                regras_prolog.append(",\n".join(corpo) + ",\n    !.\n")
+                # Sem cut (!) no final
+                regras_prolog.append(",\n".join(corpo) + ".\n")
 
     recurse(0, [])
     
@@ -128,23 +144,32 @@ def tree_to_prolog(tree, feature_names, classes):
     
     return "\n".join(regras_prolog)
 
-
 def main():
     print("A treinar modelo para gerar conhecimento_ml.pl...")
-    df = pd.read_csv('dataset_triagem.csv')
+    try:
+        df = pd.read_csv('dataset_triagem.csv')
+    except FileNotFoundError:
+        print("Erro: O ficheiro 'dataset_triagem.csv' nao foi encontrado. Certifique-se que executou o script 'gerar_dataset_realista.py' primeiro.")
+        return
+
     df = pd.get_dummies(df, columns=['sintoma_principal'])
     
     X = df.drop('Classe_Desfecho', axis=1)
     y = df['Classe_Desfecho']
     
-    clf = DecisionTreeClassifier(criterion='entropy', random_state=42)
+    clf = DecisionTreeClassifier(criterion='entropy', random_state=42, max_depth=5)
+    
+    scores = cross_val_score(clf, X, y, cv=5)
+    acuracia_media = scores.mean() * 100
+    print(f"--> Certeza de acerto global do Modelo de ML: {acuracia_media:.2f}%")
+    
     clf.fit(X, y)
     
     prolog_code = tree_to_prolog(clf, X.columns, clf.classes_)
     
     with open('conhecimento_ml.pl', 'w') as f:
         f.write(prolog_code)
-    print("Sucesso!")
+    print("Ficheiro 'conhecimento_ml.pl' gerado com sucesso!")
 
 if __name__ == '__main__':
     main()
