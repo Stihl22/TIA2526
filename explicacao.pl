@@ -55,3 +55,4 @@ limpar_explicacao :-
     retractall(justificacao(_, _, _)),
     retractall(contador_just(_)),
     assertz(contador_just(0)).
+    

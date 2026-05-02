@@ -2,19 +2,6 @@
 % SISD SNS24 - BASE DE CONHECIMENTO (conhecimento.pl)
 % Versao ASCII-only: todas as strings sao plain text.
 % Regras de producao clinicas com suporte a graus de certeza.
-%
-% Cada regra recebe Certeza de cada premissa afirmativa e calcula
-% a Certeza da regra como min(C1, min(C2, ...)) -- conjuncao fuzzy.
-%
-% \+ pergunta(X, Txt, _) e SEGURO: se X ja foi negado, nao(X) esta
-% assertado e pergunta falha sem repetir a pergunta ao utilizador.
-% A negacao nao contribui para o calculo de certeza (so as
-% premissas afirmativas entram no min).
-%
-% DEPENDENCIAS: base_dados.pl, explicacao.pl
-%   (pergunta/3 definido em interface.pl - carregado antes)
-% =============================================================
-
 % =============================================================
 % SECCAO A: PRE-TRIAGEM (Avaliacao ABC)
 % Prioridade ABSOLUTA - avaliada SEMPRE antes do fluxo clinico.
