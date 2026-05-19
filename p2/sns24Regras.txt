@@ -1,0 +1,113 @@
+# Base de Conhecimento SNS24 — Algoritmos de Decisão Clínica COVID-19 
+# Ficheiro formatado para Sistemas Inteligentes de Suporte à Decisão (SISD) 
+# Módulos: FEBRE, FALTA DE AR / DISPNEIA, TOSSE 
+# Fonte: Adaptado do Manual de Formação SNS24 - Introdução ao Sistema de Triagem (2022_V4.0)
+
+============================================================
+
+## PRÉ-TRIAGEM UNIVERSAL (COMPROMISSO ABC)
+NOTA: Tem prioridade absoluta sobre qualquer outro algoritmo.
+
+### Sintomas de EMERGÊNCIA (ligar 112 / INEM imediatamente)
+- Utente inconsciente, não responde ou está desorientado.
+- Dificuldade respiratória intensa, cianose ou incapacidade de falar.
+- Hemorragia ativa grave (ex: trauma ou sangramento profuso).
+
+---
+
+## PROTOCOLO: FEBRE
+
+### Sintomas de EMERGÊNCIA (112 / INEM)
+- Febre com convulsão ativa no momento da chamada.
+- Febre acompanhada de cianose labial ou incapacidade de falar frases completas (dificuldade respiratória grave).
+- Suspeita de meningite grave com estado de consciência comprometido (cefaleia + impossibilidade de mobilizar o pescoço + manchas na pele que não cedem à digitopressão).
+
+### Sintomas URGENTES (Serviço de Urgência Hospitalar / ADR-SU)
+- Temperatura axilar igual ou superior a 40°C ou retal igual ou superior a 41°C.
+- Suspeita de meningite meningocócica sem compromisso de consciência (rigidez na nuca e manchas que não desaparecem com o teste do copo).
+- Sinais de desidratação grave (diminuição de urina, boca muito seca, olhos encovados, choro sem lágrimas).
+- Febre em utente com critérios de gravidade imediatos (ex: doente oncológico ativo, imunodeprimido, em diálise, grávida ou criança menor de 1 ano).
+- Febre que não baixa pelo menos 1°C com antipirético em utente com critérios de gravidade.
+- Agravamento do quadro clínico nas últimas 48h num utente com fatores de risco.
+
+### Sintomas de CONSULTA (Cuidados de Saúde Primários / ADR-CSP)
+- Historial de convulsões associadas a febre, mas sem convulsão a ocorrer no momento.
+- Febre persistente por mais de 48h, que não cede a medicação, em doente com comorbilidades (ex: asma, diabetes, insuficiência cardíaca).
+- Febre ligeira no pós-operatório ou pós-trauma, nas últimas 6 semanas, a necessitar de observação.
+- Utente com febre ligeira, mas sem suporte social adequado (não sabe usar telemóvel ou não tem apoio em casa para isolamento).
+
+### AUTO-CUIDADO (Isolamento domiciliário)
+- Febre há menos de 48h que baixa com antipiréticos em utente autónomo e sem comorbilidades (inclui agendamento de teste COVID e chamada de seguimento em 24h).
+- Febre leve associada a anosmia (perda de olfato) ou ageusia (perda de paladar) súbita (inclui teste e seguimento).
+- Febre reativa nos primeiros 2 a 7 dias após toma de vacina ou injeção (sem requisição de teste).
+
+---
+
+## PROTOCOLO: FALTA DE AR / DISPNEIA
+
+### Sintomas de EMERGÊNCIA (112 / INEM)
+- Cianose labial ou nos leitos das unhas.
+- Incapacidade de falar frases completas.
+- Sensação de encerramento da garganta ou tumefação da língua.
+- Estridor (som agudo e laríngeo audível ao respirar, indicando obstrução de via aérea).
+- Respiração ruidosa ou retrações torácicas persistentes por mais de 30 minutos (covas entre as costelas).
+
+### Sintomas URGENTES (Serviço de Urgência Hospitalar / ADR-SU)
+- Dispneia de início súbito sem causa atribuível e sem febre ou doença prévia conhecida.
+- Dificuldade respiratória mesmo em repouso.
+- Falta de ar acompanhada de hemoptises (tosse com expectoração com sangue).
+- Agravamento de falta de ar nas últimas 48h em doente com critérios de gravidade.
+- Pieira de novo (tipo miar de gato) sem diagnóstico prévio de asma.
+
+### Sintomas de CONSULTA (Cuidados de Saúde Primários / ADR-CSP)
+- Agravamento de crise de asma em doente já diagnosticado, sem resposta a medicação de resgate (broncodilatador).
+- Dispneia ligeira e pieira intermitente de início recente.
+
+### AUTO-CUIDADO
+- Dispneia ligeira sem critérios de gravidade, diretamente atribuída a febre ou infeção (inclui monitorização e contacto em 24h).
+
+---
+
+## PROTOCOLO: TOSSE
+
+### Sintomas de EMERGÊNCIA (112 / INEM)
+- Tosse associada a dispneia grave ou hemoptises abundantes.
+
+### Sintomas URGENTES (Serviço de Urgência Hospitalar / ADR-SU)
+- Tosse acompanhada de hemoptises ligeiras (sangue na expectoração) mesmo que estável.
+- Hemoptises em doente com critérios de gravidade estabelecidos (ex: oncológico, imunodeprimido).
+- Tosse com falta de ar ativa em doente com fatores de risco.
+- Tosse e febre alta igual ou superior a 40°C.
+- Tosse com pieira de novo sem diagnóstico prévio de asma.
+- Agravamento súbito da tosse nas últimas 48h em doente de risco.
+
+### Sintomas de CONSULTA (Cuidados de Saúde Primários / ADR-CSP)
+- Tosse persistente ou intensa com febre há mais de 48h em doente com comorbilidades associadas.
+- Utente com tosse nova mas sem suporte social adequado para gestão em casa.
+
+### AUTO-CUIDADO (Isolamento domiciliário)
+- Tosse de início recente com febre inferior a 48h controlável, com ou sem anosmia/ageusia, em utente autónomo (isolar 7 dias, requisição de teste e contacto em 24h).
+- Tosse nova associada a febre sem sinais COVID específicos e sem critérios de gravidade.
+- Tosse seca ligeira, com duração inferior a 3 semanas, sem febre ou comorbilidades (sem necessidade de teste COVID).
+- Tosse estável em doente com teste COVID positivo nos últimos 10 dias.
+
+---
+
+## REGRAS DE REDIRECÇÃO (Transferência para Enfermeiro Sénior)
+- Utente confirma ter tido COVID-19 nos últimos 180 dias e já obteve alta (sai do algoritmo COVID e entra no geral).
+- Doente com DPOC ou fibrose pulmonar em fase estável, sem agravamento do padrão de dispneia habitual.
+- Tosse seca crónica presente há 3 semanas ou mais sem agravamento significativo.
+
+---
+
+## TABELA RESUMO DE ENCAMINHAMENTOS E DISPOSIÇÕES FINAIS (DF)
+
+| Nível de Urgência | Disposição Final (Código) | Acção Resumo |
+|---|---|---|
+| EMERGÊNCIA | EMERGÊNCIA (112/INEM) | Acionamento imediato do 112; recolha de morada e transferência. |
+| URGÊNCIA | ADR-SU | Aconselhamento direto para recurso urgente ao Hospital com envio de SMS. |
+| MODERADO / URGÊNCIA CSP | ADR-CSP | Recurso ao Centro de Saúde para observação no próprio dia. |
+| LIGEIRO | AUTOCUIDADO (+ SEGUIMENTO) | Isolamento em casa, emissão de DPI, requisição de teste COVID e possível seguimento em 24h. |
+| MÍNIMO | AUTOCUIDADO SEM TESTE | Isolamento profilático e sintomas controlados sem indicação para teste. |
+
+---

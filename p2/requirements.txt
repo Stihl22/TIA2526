@@ -1,26 +1,16 @@
 # ─────────────────────────────────────────────────────────────────
 # SIAD — Sistema Inteligente de Apoio à Decisão Clínica
-# Sprint 1: Pipeline de Ingestão de Dados (data_ingestion.py)
 # ─────────────────────────────────────────────────────────────────
 # Instalar com: pip install -r requirements.txt
- 
-# Framework RAG
-langchain>=0.2.0
-langchain-community>=0.2.0
+
+# Interface Web
+streamlit>=1.30.0
+
+# Framework RAG e Integração LLM
 langchain-core>=0.2.0
+langchain-ollama>=0.1.0
 langchain-chroma>=0.1.0
- 
-# Carregamento de ficheiros .docx
-docx2txt>=0.8
-python-docx>=1.1.0
- 
-# Vector Store local
 chromadb>=0.5.0
- 
-# Embeddings multilíngues (PT-PT)
-sentence-transformers>=3.0.0
-transformers>=4.40.0
-torch>=2.2.0   # CPU-only; para GPU: pip install torch --index-url https://download.pytorch.org/whl/cu121
- 
-# Utilitários
-numpy>=1.26.0
+
+# Correção de compatibilidade (Prevenir erros de C-API do NumPy 2.0)
+numpy<2.0.0

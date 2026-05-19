@@ -98,7 +98,7 @@ st.markdown("""
 
 @st.cache_resource(show_spinner="A carregar o motor de triagem, aguarde...")
 def carregar_engine() -> SIADRagEngine:
-    engine = SIADRagEngine(ollama_model="phi3")
+    engine = SIADRagEngine(ollama_model="llama3.2:1b")
     engine.inicializar()
     return engine
 
@@ -131,14 +131,13 @@ try:
 except FileNotFoundError:
     engine_ok = False
     st.error(
-        "**Base de dados não encontrada.**\n\n"
-        "Execute primeiro o pipeline de ingestão:\n"
-        "```bash\npython data_ingestion.py\n```",
+        "**Ficheiro de regras não encontrado.**\n\n"
+        "Certifique-se de que o ficheiro `sns24Regras.txt` existe no diretório.",
     )
 except Exception as exc:
     engine_ok = False
     st.error(
-        f"**Erro ao inicializar o motor RAG:**\n\n`{type(exc).__name__}: {exc}`\n\n"
+        f"**Erro ao inicializar o motor de triagem:**\n\n`{type(exc).__name__}: {exc}`\n\n"
         "Verifique se o Ollama está em execução: `ollama serve`",
     )
 
@@ -150,7 +149,7 @@ except Exception as exc:
 st.markdown("""
 <div class="siad-header">
     <h1>SIAD &mdash; Assistente de Triagem SNS24</h1>
-    <p>Sistema Inteligente de Apoio à Decisão Clínica &middot; phi3 + ChromaDB &middot; LCEL</p>
+    <p>Sistema Inteligente de Apoio à Decisão Clínica &middot; llama3.2:1b &middot; RAG Chroma</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -176,14 +175,14 @@ with st.sidebar:
     st.divider()
 
     # ── Chunks Recuperados ──────────────────────────────────────────────────
-    st.markdown('<p class="debug-title">Chunks recuperados (última query)</p>', unsafe_allow_html=True)
+    st.markdown('<p class="debug-title">Contexto Base de Conhecimento</p>', unsafe_allow_html=True)
 
     fontes = st.session_state.last_sources
 
     if not fontes:
-        st.info("Ainda não houve interações. Envie uma mensagem para ver os chunks recuperados.")
+        st.info("Ainda não houve interações. Envie uma mensagem para ver o contexto utilizado.")
     else:
-        st.caption(f"{len(fontes)} chunk(s) recuperado(s) da ChromaDB por similaridade coseno")
+        st.caption("A utilizar as regras do ficheiro sns24Regras.txt")
 
         for i, doc in enumerate(fontes, start=1):
             chunk_id    = doc.metadata.get("chunk_id", "?")
@@ -215,10 +214,9 @@ with st.sidebar:
     st.markdown("""
 | Parâmetro | Valor |
 |-----------|-------|
-| LLM | `phi3` (Ollama) |
-| Embeddings | `MiniLM-L12-v2` |
-| Vector Store | ChromaDB local |
-| Top-K retrieval | 4 chunks |
+| LLM | `llama3.2:1b` (Ollama) |
+| Leitura | RAG Vetorial (ChromaDB) |
+| Embeddings| `nomic-embed-text` |
 | Temperatura | 0.1 |
 | Framework | LangChain LCEL |
 """)

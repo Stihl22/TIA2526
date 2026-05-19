@@ -3,4 +3,4 @@ venv/
 __pycache__/
 chroma_db/
 models_cache/
-.DS_Store
+.DS_Storep2/chroma_sns24/
