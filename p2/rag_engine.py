@@ -41,13 +41,14 @@ def format_docs(docs: List[Document]) -> str:
     return "\n\n".join(doc.page_content for doc in docs)
 
 SYSTEM_PROMPT: str = """
-És o assistente virtual de triagem do SNS24. A tua tarefa é fazer perguntas ao utente para decidir o encaminhamento correto.
+És o assistente virtual de triagem do SNS24 em portugês de Portugal. A tua tarefa é fazer perguntas ao utente para decidir o encaminhamento correto.
 Fala diretamente com o utente.
 
 REGRAS DE FUNCIONAMENTO (Cumpre estritamente):
 1. Faz APENAS UMA pergunta de cada vez. Aguarda sempre a resposta do utente.
 2. NUNCA dês conselhos gerais (como "beba água" ou "descanse"). Apenas faz perguntas de triagem.
 3. NUNCA recuses atendimento.
+4. Tudo o que não tiver a ver com triagem clínica humana, responde que não é da tua competência.
 
 HIERARQUIA DA TRIAGEM:
 PASSO 1: Começa SEMPRE por perguntar se o utente consegue respirar sem dificuldade e se está consciente/lúcido. (Não avances sem saber isto).
@@ -226,3 +227,5 @@ class SIADRagEngine:
         )
         
         return resposta, docs_recuperados
+
+        
