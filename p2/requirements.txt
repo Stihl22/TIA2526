@@ -2,15 +2,20 @@
 # SIAD — Sistema Inteligente de Apoio à Decisão Clínica
 # ─────────────────────────────────────────────────────────────────
 # Instalar com: pip install -r requirements.txt
+# NOTA: Requer Python 3.9 a 3.12 (NÃO usar Python 3.13+)
 
 # Interface Web
 streamlit>=1.30.0
 
-# Framework RAG e Integração LLM
-langchain-core>=0.2.0
-langchain-ollama>=0.1.0
-langchain-chroma>=0.1.0
-chromadb>=0.5.0
+# Framework RAG e Integração LLM (ecossistema 0.2.x — compatível)
+langchain>=0.2.0,<0.3.0
+langchain-core>=0.2.0,<0.3.0
+langchain-text-splitters>=0.2.0,<0.3.0
+langchain-ollama>=0.1.0,<0.2.0
+langchain-chroma>=0.1.0,<0.2.0
+
+# Base de dados vectorial
+chromadb>=0.4.0,<0.6.0
 
 # Correção de compatibilidade (Prevenir erros de C-API do NumPy 2.0)
 numpy<2.0.0

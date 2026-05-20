@@ -9,6 +9,7 @@ Módulo: rag_engine.py
 """
 
 import logging
+import shutil
 import sys
 from pathlib import Path
 from typing import List, Optional, Tuple
@@ -34,6 +35,7 @@ OLLAMA_MODEL:    str   = "llama3.2"
 EMBEDDING_MODEL: str   = "nomic-embed-text"
 OLLAMA_BASE_URL: str   = "http://localhost:11434"
 OLLAMA_TEMP:     float = 0.1
+CHROMA_DIR:      str   = "./chroma_db_cache"
 
 def format_docs(docs: List[Document]) -> str:
     return "\n\n".join(doc.page_content for doc in docs)
@@ -84,8 +86,20 @@ def carregar_e_indexar_regras(caminho_ficheiro: str = REGRAS_PATH, base_url: str
     
     logger.info(f"Gerados {len(chunks)} chunks de conhecimento (Formatados por Markdown).")
     
+    # Limpar cache antigo para evitar conflitos de schema do SQLite
+    chroma_path = Path(CHROMA_DIR)
+    if chroma_path.exists():
+        shutil.rmtree(chroma_path)
+        logger.info("Cache ChromaDB anterior removido.")
+
     embeddings = OllamaEmbeddings(model=EMBEDDING_MODEL, base_url=base_url)
-    vectorstore = Chroma.from_documents(documents=chunks, embedding=embeddings)
+    vectorstore = Chroma.from_documents(
+        documents=chunks,
+        embedding=embeddings,
+        persist_directory=CHROMA_DIR,
+        collection_name="siad_regras",
+    )
+    logger.info(f"✔ Vector Store criada em '{CHROMA_DIR}' — {len(chunks)} vectores indexados.")
     return vectorstore
 
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
