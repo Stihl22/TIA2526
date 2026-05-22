@@ -31,7 +31,7 @@ logging.basicConfig(
 logger = logging.getLogger("SIAD.RAGEngine")
 
 REGRAS_PATH:     str   = "./sns24Regras.txt"
-OLLAMA_MODEL:    str   = "llama3.2"
+OLLAMA_MODEL:    str   = "llama3.2:1b"
 EMBEDDING_MODEL: str   = "nomic-embed-text"
 OLLAMA_BASE_URL: str   = "http://localhost:11434"
 OLLAMA_TEMP:     float = 0.1
